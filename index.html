@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       * {
         margin: 0;
@@ -40,7 +44,24 @@
         border-radius: 50%;
         margin: 0 auto 15px;
         display: block;
-        object-fit: cover;
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      /* Keyframes untuk animasi mengambang */
+      @keyframes floating {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(1deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-5px) rotate(-1deg);
+        }
       }
 
       .header h1 {
@@ -78,8 +99,12 @@
       }
 
       @keyframes promoGlow {
-        from { box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3); }
-        to { box-shadow: 0 8px 25px rgba(214, 51, 132, 0.5); }
+        from {
+          box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+        }
+        to {
+          box-shadow: 0 8px 25px rgba(214, 51, 132, 0.5);
+        }
       }
 
       .method-selector {
@@ -201,8 +226,13 @@
       }
 
       @keyframes promoPulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
       }
 
       .original-price {
@@ -443,7 +473,7 @@
       .footer-divider {
         width: 100%;
         height: 1px;
-        background: #E7A0CC;
+        background: #e7a0cc;
         margin: 20px 0;
       }
 
@@ -473,7 +503,7 @@
           class="logo"
           onerror="this.style.display='none'"
         />
-        <h1>ESPOIRE ROBUX</h1>
+        <h1>ESPOIRE TOPUP</h1>
         <p>Melayani Top Up Robux Secepat Kilat!</p>
       </div>
 
@@ -870,7 +900,8 @@
             <div class="custom-amount">
               <h4>✎ Input Nominal Custom</h4>
               <p style="margin-bottom: 15px">
-                Rate: <span id="gamepassRate">Rp 130/robux</span> | Minimal: 25 robux
+                Rate: <span id="gamepassRate">Rp 130/robux</span> | Minimal: 25
+                robux
               </p>
 
               <div
@@ -958,7 +989,7 @@
         </div>
       </div>
 
-      <div class="order-form">
+      <div class="order-form" class="fas fa-file">
         <h3 style="color: #203f9a; margin-bottom: 20px; text-align: center">
           ✶ Form Order ✶
         </h3>
@@ -1082,10 +1113,14 @@
         <div class="footer-sections">
           <div class="footer-section">
             <h4>ⓘ Tutorial & Bantuan</h4>
-            <a href="https://youtu.be/backup-code-tutorial" target="_blank">Tutorial Backup Code</a>
-            <a href="https://youtu.be/gamepass-tutorial" target="_blank">Tutorial Gamepass</a>
+            <a href="https://youtu.be/backup-code-tutorial" target="_blank"
+              >Tutorial Backup Code</a
+            >
+            <a href="https://youtu.be/gamepass-tutorial" target="_blank"
+              >Tutorial Gamepass</a
+            >
           </div>
-                    
+
           <div class="footer-section">
             <h4>♥︎ Sosial Media</h4>
             <a href="https://t.me/xespoire" target="_blank">Channel Telegram</a>
@@ -1114,7 +1149,7 @@
       function checkPromoDate() {
         const today = new Date();
         const day = today.getDate();
-        
+
         if (day === 10) {
           isPromoActive = true;
           document.getElementById("promoBanner").classList.remove("hidden");
@@ -1133,22 +1168,26 @@
         document.querySelectorAll(".price-item").forEach((item) => {
           const originalPrice = parseInt(item.dataset.price);
           const promoPrice = Math.round(originalPrice * 0.97); // 3% discount
-          
+
           // Add promo label
-          if (!item.querySelector('.promo-label')) {
-            const promoLabel = document.createElement('div');
-            promoLabel.className = 'promo-label';
-            promoLabel.textContent = 'PROMO 3%';
+          if (!item.querySelector(".promo-label")) {
+            const promoLabel = document.createElement("div");
+            promoLabel.className = "promo-label";
+            promoLabel.textContent = "PROMO 3%";
             item.appendChild(promoLabel);
           }
-          
+
           // Update price display
-          const priceDiv = item.querySelector('.price');
+          const priceDiv = item.querySelector(".price");
           priceDiv.innerHTML = `
-            <span class="original-price">Rp ${originalPrice.toLocaleString('id-ID')}</span>
-            <span class="promo-price">Rp ${promoPrice.toLocaleString('id-ID')}</span>
+            <span class="original-price">Rp ${originalPrice.toLocaleString(
+              "id-ID"
+            )}</span>
+            <span class="promo-price">Rp ${promoPrice.toLocaleString(
+              "id-ID"
+            )}</span>
           `;
-          
+
           // Store promo price
           item.dataset.promoPrice = promoPrice;
         });
@@ -1158,17 +1197,17 @@
       function removePromoFromAllItems() {
         document.querySelectorAll(".price-item").forEach((item) => {
           const originalPrice = parseInt(item.dataset.price);
-          
+
           // Remove promo label
-          const promoLabel = item.querySelector('.promo-label');
+          const promoLabel = item.querySelector(".promo-label");
           if (promoLabel) {
             promoLabel.remove();
           }
-          
+
           // Reset price display
-          const priceDiv = item.querySelector('.price');
-          priceDiv.innerHTML = `Rp ${originalPrice.toLocaleString('id-ID')}`;
-          
+          const priceDiv = item.querySelector(".price");
+          priceDiv.innerHTML = `Rp ${originalPrice.toLocaleString("id-ID")}`;
+
           // Remove promo price data
           delete item.dataset.promoPrice;
         });
@@ -1176,12 +1215,12 @@
 
       // Function to update gamepass rate display
       function updateGamepassRate() {
-        const rateElement = document.getElementById('gamepassRate');
+        const rateElement = document.getElementById("gamepassRate");
         if (isPromoActive) {
           const promoRate = Math.round(130 * 0.97); // 3% discount on rate
           rateElement.innerHTML = `<span style="text-decoration: line-through; color: #999;">Rp 130/robux</span> <span style="color: #d63384; font-weight: 700;">Rp ${promoRate}/robux</span>`;
         } else {
-          rateElement.textContent = 'Rp 130/robux';
+          rateElement.textContent = "Rp 130/robux";
         }
       }
 
@@ -1283,7 +1322,9 @@
         const totalCost = robuxAmount * rate;
         const gamepassPrice = Math.ceil(robuxAmount / 0.7);
 
-        let packageText = `${robuxAmount} Robux Gamepass (Custom) - Rp ${totalCost.toLocaleString("id-ID")}`;
+        let packageText = `${robuxAmount} Robux Gamepass (Custom) - Rp ${totalCost.toLocaleString(
+          "id-ID"
+        )}`;
         if (isPromoActive) {
           packageText += " (PROMO 5%)";
         }
@@ -1300,7 +1341,7 @@
           type: "gamepass-custom",
           text: packageText,
           gamepassPrice: gamepassPrice,
-          isPromo: isPromoActive
+          isPromo: isPromoActive,
         };
       }
 
@@ -1319,7 +1360,9 @@
 
           let packageText = "";
           if (type === "gamepass") {
-            packageText = `${robux} Robux Gamepass - Rp ${effectivePrice.toLocaleString("id-ID")}`;
+            packageText = `${robux} Robux Gamepass - Rp ${effectivePrice.toLocaleString(
+              "id-ID"
+            )}`;
           } else {
             const typeText =
               type === "fast"
@@ -1327,9 +1370,11 @@
                 : type === "semi-fast"
                 ? "SEMI FAST"
                 : "SLOW";
-            packageText = `${robux} Robux Via Login ${typeText} - Rp ${effectivePrice.toLocaleString("id-ID")}`;
+            packageText = `${robux} Robux Via Login ${typeText} - Rp ${effectivePrice.toLocaleString(
+              "id-ID"
+            )}`;
           }
-          
+
           if (isPromoActive) {
             packageText += " (PROMO 5%)";
           }
@@ -1337,14 +1382,16 @@
           document.getElementById("selectedRobux").value = `${parseInt(
             robux
           ).toLocaleString("id-ID")} Robux`;
-          document.getElementById("totalPrice").value = `Rp ${effectivePrice.toLocaleString("id-ID")}`;
+          document.getElementById(
+            "totalPrice"
+          ).value = `Rp ${effectivePrice.toLocaleString("id-ID")}`;
           selectedPackage = {
             robux: robux,
             price: effectivePrice,
             originalPrice: parseInt(this.dataset.price),
             type: type,
             text: packageText,
-            isPromo: isPromoActive
+            isPromo: isPromoActive,
           };
         });
       });
@@ -1407,19 +1454,27 @@
         const notes = document.getElementById("notes").value;
 
         let message = `⭑ *FORM ORDER ROBUX* ⭑\n\n`;
-        
+
         if (selectedPackage.isPromo) {
           message += `*PAKET PROMO*\n\n`;
         }
-        
+
         message += `*Jumlah Robux:* ${parseInt(
           selectedPackage.robux
         ).toLocaleString("id-ID")}\n`;
-        
+
         if (selectedPackage.isPromo && selectedPackage.originalPrice) {
-          message += `*Harga Normal:* Rp ${selectedPackage.originalPrice.toLocaleString("id-ID")}\n`;
-          message += `*Harga Promo:* Rp ${selectedPackage.price.toLocaleString("id-ID")} _(Hemat Rp ${(selectedPackage.originalPrice - selectedPackage.price).toLocaleString("id-ID")})_\n`;
-          message += `*Total Harga:* Rp ${selectedPackage.price.toLocaleString("id-ID")}\n`;
+          message += `*Harga Normal:* Rp ${selectedPackage.originalPrice.toLocaleString(
+            "id-ID"
+          )}\n`;
+          message += `*Harga Promo:* Rp ${selectedPackage.price.toLocaleString(
+            "id-ID"
+          )} _(Hemat Rp ${(
+            selectedPackage.originalPrice - selectedPackage.price
+          ).toLocaleString("id-ID")})_\n`;
+          message += `*Total Harga:* Rp ${selectedPackage.price.toLocaleString(
+            "id-ID"
+          )}\n`;
         } else {
           message += `*Total Harga:* Rp ${parseInt(
             selectedPackage.price
@@ -1492,7 +1547,7 @@
       }
 
       // Initialize promo check when page loads
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         checkPromoDate();
       });
     </script>
