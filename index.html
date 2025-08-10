@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESPOIRE TOP UP - Robux Murah & Terpercaya</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .header h1 {
+        color: #203f9a;
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 16px;
+      }
+
+      /* Promo Banner Styles */
+      .promo-banner {
+        background: linear-gradient(135deg, #d63384, #eb4797);
+        color: white;
+        padding: 15px;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+        animation: promoGlow 2s ease-in-out infinite alternate;
+      }
+
+      .promo-banner h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .promo-banner p {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      @keyframes promoGlow {
+        from { box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3); }
+        to { box-shadow: 0 8px 25px rgba(214, 51, 132, 0.5); }
+      }
+
+      .method-selector {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .method-btn {
+        background: white;
+        border: 2px solid #94c2da;
+        color: #4e7cb2;
+        padding: 12px 24px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        min-width: 150px;
+      }
+
+      .method-btn.active {
+        background: #4e7cb2;
+        color: white;
+        border-color: #4e7cb2;
+      }
+
+      .method-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .pricelist-container {
+        margin-bottom: 30px;
+      }
+
+      .pricelist-section {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        color: #203f9a;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #efe8e0;
+      }
+
+      .price-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .price-item {
+        background: #efe8e0;
+        border: 2px solid transparent;
+        padding: 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        font-size: 14px;
+        position: relative;
+      }
+
+      .price-item:hover {
+        border-color: #4e7cb2;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .price-item.selected {
+        background: #4e7cb2;
+        color: white;
+        border-color: #4e7cb2;
+      }
+
+      .robux-amount {
+        font-weight: 600;
+        color: #203f9a;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .price-item.selected .robux-amount {
+        color: white;
+      }
+
+      .price {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .price-item.selected .price {
+        color: white;
+      }
+
+      /* Promo Label Styles */
+      .promo-label {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #d63384;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: 0 2px 8px rgba(214, 51, 132, 0.3);
+        animation: promoPulse 1.5s ease-in-out infinite;
+      }
+
+      @keyframes promoPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+
+      .original-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 12px;
+        margin-right: 8px;
+      }
+
+      .promo-price {
+        color: #d63384;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .price-item.selected .original-price {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .price-item.selected .promo-price {
+        color: white;
+      }
+
+      .order-form {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #203f9a;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e7a0cc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #203f9a;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .submit-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .submit-btn {
+        background: #eb4797;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        min-width: 150px;
+      }
+
+      .submit-btn:hover {
+        background: #d63384;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(235, 71, 151, 0.4);
+      }
+
+      .submit-btn.telegram {
+        background: #94c2da;
+      }
+
+      .submit-btn.telegram:hover {
+        background: #7bb1d1;
+        box-shadow: 0 5px 15px rgba(148, 194, 218, 0.4);
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .custom-amount {
+        background: #e7a0cc;
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .custom-amount h4 {
+        color: #203f9a;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .footer-sections {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .footer-section {
+        text-align: center;
+      }
+
+      .footer-section h4 {
+        color: #203f9a;
+        font-size: 14px;
+      }
+
+      .footer-section a {
+        display: inline-block;
+        color: #666;
+        text-decoration: none;
+        margin: 0 8px 8px 0;
+        transition: all 0.3s ease;
+        font-size: 14px;
+      }
+
+      .footer-section a:hover {
+        color: #203f9a;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .price-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 8px;
+        }
+
+        .price-item {
+          padding: 10px;
+          font-size: 13px;
+        }
+
+        .method-btn {
+          padding: 10px 20px;
+          font-size: 14px;
+          min-width: 130px;
+        }
+
+        .submit-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .submit-btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .promo-banner h3 {
+          font-size: 18px;
+        }
+
+        .promo-banner p {
+          font-size: 13px;
+        }
+      }
+
+      .help-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 25px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .help-button:hover {
+        background: #128c7e;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+      }
+
+      .footer-divider {
+        width: 100%;
+        height: 1px;
+        background: #E7A0CC;
+        margin: 20px 0;
+      }
+
+      @media (max-width: 480px) {
+        .price-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .method-selector {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .method-btn {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="logo.png"
+          alt="ESPOIRE Logo"
+          class="logo"
+          onerror="this.style.display='none'"
+        />
+        <h1>ESPOIRE GARDEN</h1>
+        <p>Melayani Top Up Robux Secepat Kilat!</p>
+      </div>
+
+      <!-- Promo Banner (only shown on 10th) -->
+      <div id="promoBanner" class="promo-banner hidden">
+        <h3>🎉 PROMO SETIAP TANGGAL 10! 🎉</h3>
+        <p>Dapatkan diskon 3% untuk semua paket Robux hari ini!</p>
+      </div>
+
+      <div class="method-selector">
+        <button class="method-btn active" onclick="selectMethod('login')">
+          Robux Via Login
+        </button>
+        <button class="method-btn" onclick="selectMethod('gamepass')">
+          Robux Gamepass
+        </button>
+      </div>
+
+      <div class="pricelist-container">
+        <div id="login-pricelist" class="pricelist-content">
+          <div class="pricelist-section">
+            <h3 class="section-title">➜ Robux Via Login - FAST</h3>
+            <div class="price-grid" id="fast-prices">
+              <div
+                class="price-item"
+                data-robux="80"
+                data-price="16000"
+                data-type="fast"
+              >
+                <div class="robux-amount">80 Robux</div>
+                <div class="price">Rp 16.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="160"
+                data-price="30000"
+                data-type="fast"
+              >
+                <div class="robux-amount">160 Robux</div>
+                <div class="price">Rp 30.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="240"
+                data-price="45000"
+                data-type="fast"
+              >
+                <div class="robux-amount">240 Robux</div>
+                <div class="price">Rp 45.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="320"
+                data-price="58000"
+                data-type="fast"
+              >
+                <div class="robux-amount">320 Robux</div>
+                <div class="price">Rp 58.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="400"
+                data-price="70000"
+                data-type="fast"
+              >
+                <div class="robux-amount">400 Robux</div>
+                <div class="price">Rp 70.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="480"
+                data-price="85000"
+                data-type="fast"
+              >
+                <div class="robux-amount">480 Robux</div>
+                <div class="price">Rp 85.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="560"
+                data-price="102000"
+                data-type="fast"
+              >
+                <div class="robux-amount">560 Robux</div>
+                <div class="price">Rp 102.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="720"
+                data-price="125000"
+                data-type="fast"
+              >
+                <div class="robux-amount">720 Robux</div>
+                <div class="price">Rp 125.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="800"
+                data-price="139000"
+                data-type="fast"
+              >
+                <div class="robux-amount">800 Robux</div>
+                <div class="price">Rp 139.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="960"
+                data-price="165000"
+                data-type="fast"
+              >
+                <div class="robux-amount">960 Robux</div>
+                <div class="price">Rp 165.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1040"
+                data-price="187000"
+                data-type="fast"
+              >
+                <div class="robux-amount">1,040 Robux</div>
+                <div class="price">Rp 187.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1700"
+                data-price="278000"
+                data-type="fast"
+              >
+                <div class="robux-amount">1,700 Robux</div>
+                <div class="price">Rp 278.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="4500"
+                data-price="690000"
+                data-type="fast"
+              >
+                <div class="robux-amount">4,500 Robux</div>
+                <div class="price">Rp 690.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricelist-section">
+            <h3 class="section-title">➜ Robux Via Login - SEMI FAST</h3>
+            <div class="price-grid" id="semi-fast-prices">
+              <div
+                class="price-item"
+                data-robux="500"
+                data-price="74000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">500 Robux</div>
+                <div class="price">Rp 74.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1000"
+                data-price="145000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">1,000 Robux</div>
+                <div class="price">Rp 145.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1500"
+                data-price="220000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">1,500 Robux</div>
+                <div class="price">Rp 220.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="2000"
+                data-price="280000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">2,000 Robux</div>
+                <div class="price">Rp 280.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="2500"
+                data-price="350000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">2,500 Robux</div>
+                <div class="price">Rp 350.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="3000"
+                data-price="418000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">3,000 Robux</div>
+                <div class="price">Rp 418.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="4000"
+                data-price="550000"
+                data-type="semi-fast"
+              >
+                <div class="robux-amount">4,000 Robux</div>
+                <div class="price">Rp 550.000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricelist-section">
+            <h3 class="section-title">➜ Robux Via Login - SLOW</h3>
+            <div class="price-grid" id="slow-prices">
+              <div
+                class="price-item"
+                data-robux="500"
+                data-price="72000"
+                data-type="slow"
+              >
+                <div class="robux-amount">500 Robux</div>
+                <div class="price">Rp 72.000</div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1000"
+                data-price="140000"
+                data-type="slow"
+              >
+                <div class="robux-amount">1,000 Robux</div>
+                <div class="price">Rp 140.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gamepass-pricelist" class="pricelist-content hidden">
+          <div class="pricelist-section">
+            <h3 class="section-title">➜ Robux Gamepass</h3>
+            <div class="price-grid" id="gamepass-prices">
+              <div
+                class="price-item"
+                data-robux="100"
+                data-price="13000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">100 Robux</div>
+                <div class="price">Rp 13.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 143 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="200"
+                data-price="26000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">200 Robux</div>
+                <div class="price">Rp 26.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 286 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="300"
+                data-price="39000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">300 Robux</div>
+                <div class="price">Rp 39.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 429 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="400"
+                data-price="52000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">400 Robux</div>
+                <div class="price">Rp 52.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 572 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="500"
+                data-price="65000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">500 Robux</div>
+                <div class="price">Rp 65.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 715 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="600"
+                data-price="78000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">600 Robux</div>
+                <div class="price">Rp 78.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 857 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="700"
+                data-price="91000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">700 Robux</div>
+                <div class="price">Rp 91.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 1,000 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="800"
+                data-price="104000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">800 Robux</div>
+                <div class="price">Rp 104.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 1,143 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="900"
+                data-price="117000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">900 Robux</div>
+                <div class="price">Rp 117.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 1,286 Robux
+                </div>
+              </div>
+              <div
+                class="price-item"
+                data-robux="1000"
+                data-price="130000"
+                data-type="gamepass"
+              >
+                <div class="robux-amount">1,000 Robux</div>
+                <div class="price">Rp 130.000</div>
+                <div
+                  class="gamepass-setting"
+                  style="font-size: 12px; color: #666; margin-top: 5px"
+                >
+                  Setting: 1,429 Robux
+                </div>
+              </div>
+            </div>
+
+            <div class="custom-amount">
+              <h4>✎ Input Nominal Custom</h4>
+              <p style="margin-bottom: 15px">
+                Rate: <span id="gamepassRate">Rp 130/robux</span> | Minimal: 25 robux
+              </p>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  margin-bottom: 15px;
+                  flex-wrap: wrap;
+                "
+              >
+                <input
+                  type="number"
+                  id="customGamepassRobux"
+                  placeholder="Masukkan jumlah robux"
+                  min="25"
+                  style="
+                    flex: 1;
+                    min-width: 150px;
+                    padding: 10px;
+                    border: 2px solid #203f9a;
+                    border-radius: 8px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateGamepass()"
+                />
+                <button
+                  type="button"
+                  onclick="selectCustomGamepass()"
+                  style="
+                    background: #4e7cb2;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-weight: 600;
+                  "
+                >
+                  Pilih
+                </button>
+              </div>
+
+              <div id="gamepassCalculation" class="hidden">
+                <div
+                  style="font-weight: 600; color: #000000; margin-bottom: 8px"
+                ></div>
+                <div id="calculationDetails"></div>
+                <div
+                  id="gamepassInstruction"
+                  style="
+                    padding: 10px;
+                    border-radius: 8px;
+                    margin-top: 10px;
+                    color: #000000;
+                    font-weight: 600;
+                    text-align: center;
+                  "
+                ></div>
+              </div>
+
+              <div
+                style="background: #e7a0cc; padding: 15px; border-radius: 10px"
+              >
+                <a
+                  href="https://youtube.com/shorts/g61IrtqxGp4?si=1H-Lwt33tW78VH-C"
+                  style="
+                    color: #203f9a;
+                    text-decoration: none;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-bottom: 8px;
+                  "
+                >
+                  🎥 Tonton Video Tutorial Membuat Gamepass Disini
+                </a>
+                <br />
+                <small style="color: #666">
+                  Pastikan gamepass sudah dibuat dengan harga yang sesuai
+                  sebelum order
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-form">
+        <h3 style="color: #203f9a; margin-bottom: 20px; text-align: center">
+          ✶ Form Order ✶
+        </h3>
+
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="selectedRobux">Jumlah Robux:</label>
+            <input
+              type="text"
+              id="selectedRobux"
+              name="selectedRobux"
+              readonly
+              placeholder="Pilih paket dari daftar harga di atas"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="totalPrice">Total Harga:</label>
+            <input
+              type="text"
+              id="totalPrice"
+              name="totalPrice"
+              readonly
+              placeholder="Total harga akan muncul otomatis"
+            />
+          </div>
+
+          <!-- Form untuk Via Login -->
+          <div id="login-form" class="method-form">
+            <div class="form-group">
+              <label for="robloxUsername">Username Roblox:</label>
+              <input
+                type="text"
+                id="robloxUsername"
+                name="robloxUsername"
+                placeholder="Masukkan username Roblox Anda"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="robloxPassword">Password Roblox:</label>
+              <input
+                type="password"
+                id="robloxPassword"
+                name="robloxPassword"
+                placeholder="Masukkan password Roblox Anda"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="backupCode">Backup Code:</label>
+              <input
+                type="text"
+                id="backupCode"
+                name="backupCode"
+                placeholder="Backup code untuk verifikasi jika ada"
+              />
+            </div>
+          </div>
+
+          <!-- Form untuk Gamepass -->
+          <div id="gamepass-form" class="method-form hidden">
+            <div class="form-group">
+              <label for="gamepassLink">Link Gamepass:</label>
+              <input
+                type="url"
+                id="gamepassLink"
+                name="gamepassLink"
+                placeholder="https://www.roblox.com/game-pass/..."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="gamepassUsername">Username Roblox:</label>
+              <input
+                type="text"
+                id="gamepassUsername"
+                name="gamepassUsername"
+                placeholder="Username Roblox untuk gamepass"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customerName">Nickname In Game:</label>
+            <input
+              type="text"
+              id="customerName"
+              name="customerName"
+              placeholder="Nickname Roblox Anda"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Catatan Tambahan (Opsional):</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="Catatan khusus atau pertanyaan..."
+            ></textarea>
+          </div>
+
+          <div class="submit-buttons">
+            <button type="button" class="submit-btn" onclick="sendToWhatsApp()">
+              ✆ Order via WhatsApp
+            </button>
+            <button
+              type="button"
+              class="submit-btn telegram"
+              onclick="sendToTelegram()"
+            >
+              ☏ Order via Telegram
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer">
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h4>ⓘ Tutorial & Bantuan</h4>
+            <a href="https://youtu.be/backup-code-tutorial" target="_blank"
+              >Tutorial Backup Code</a
+            >
+            <a>|</a>
+            <a href="https://youtu.be/gamepass-tutorial" target="_blank"
+              >Tutorial Gamepass</a
+            >
+          </div>
+
+          <div class="footer-section">
+                        <h4>☏ Hubungi Kami</h4>
+                        <a href="https://wa.me/6288226496511" target="_blank">WhatsApp</a>
+                        <a>|</a>
+                        <a href="https://t.me/ssnnwoo" target="_blank">Telegram</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>♥︎ Sosial Media</h4>
+                        <a href="https://t.me/xespoire" target="_blank">Channel Telegram</a>
+                        <a>|</a>
+                        <a href="https://x.com/mijkage" target="_blank">X</a>
+                        <a>|</a>
+                        <a href="https://t.me/vouchnya">Testimonial</a>
+                    </div>
+                </div>
+            <div class="footer-divider"></div>
+          <p>© 2025 ESPOIRE - Terpercaya & Aman</p>
+        </div>
+      </div>
+
+      <!-- Floating Help Button -->
+      <button class="help-button" onclick="openHelp()">💬 Need Help?</button>
+    </div>
+
+    <script>
+      let selectedMethod = "login";
+      let selectedPackage = null;
+      let isPromoActive = false;
+
+      // Ganti dengan nomor WhatsApp dan Telegram Anda
+      const whatsappNumber = "6288226496511"; // Ganti dengan nomor WA Anda (format 628xxx)
+      const telegramUsername = "ssnnwoo"; // Ganti dengan username Telegram Anda
+
+      // Function to check if today is 10th
+      function checkPromoDate() {
+        const today = new Date();
+        const day = today.getDate();
+        
+        if (day === 10) {
+          isPromoActive = true;
+          document.getElementById("promoBanner").classList.remove("hidden");
+          applyPromoToAllItems();
+          updateGamepassRate();
+        } else {
+          isPromoActive = false;
+          document.getElementById("promoBanner").classList.add("hidden");
+          removePromoFromAllItems();
+          updateGamepassRate();
+        }
+      }
+
+      // Function to apply promo to all price items
+      function applyPromoToAllItems() {
+        document.querySelectorAll(".price-item").forEach((item) => {
+          const originalPrice = parseInt(item.dataset.price);
+          const promoPrice = Math.round(originalPrice * 0.97); // 3% discount
+          
+          // Add promo label
+          if (!item.querySelector('.promo-label')) {
+            const promoLabel = document.createElement('div');
+            promoLabel.className = 'promo-label';
+            promoLabel.textContent = 'PROMO 3%';
+            item.appendChild(promoLabel);
+          }
+          
+          // Update price display
+          const priceDiv = item.querySelector('.price');
+          priceDiv.innerHTML = `
+            <span class="original-price">Rp ${originalPrice.toLocaleString('id-ID')}</span>
+            <span class="promo-price">Rp ${promoPrice.toLocaleString('id-ID')}</span>
+          `;
+          
+          // Store promo price
+          item.dataset.promoPrice = promoPrice;
+        });
+      }
+
+      // Function to remove promo from all items
+      function removePromoFromAllItems() {
+        document.querySelectorAll(".price-item").forEach((item) => {
+          const originalPrice = parseInt(item.dataset.price);
+          
+          // Remove promo label
+          const promoLabel = item.querySelector('.promo-label');
+          if (promoLabel) {
+            promoLabel.remove();
+          }
+          
+          // Reset price display
+          const priceDiv = item.querySelector('.price');
+          priceDiv.innerHTML = `Rp ${originalPrice.toLocaleString('id-ID')}`;
+          
+          // Remove promo price data
+          delete item.dataset.promoPrice;
+        });
+      }
+
+      // Function to update gamepass rate display
+      function updateGamepassRate() {
+        const rateElement = document.getElementById('gamepassRate');
+        if (isPromoActive) {
+          const promoRate = Math.round(130 * 0.97); // 3% discount on rate
+          rateElement.innerHTML = `<span style="text-decoration: line-through; color: #999;">Rp 130/robux</span> <span style="color: #d63384; font-weight: 700;">Rp ${promoRate}/robux</span>`;
+        } else {
+          rateElement.textContent = 'Rp 130/robux';
+        }
+      }
+
+      // Function to get effective price (promo or original)
+      function getEffectivePrice(item) {
+        if (isPromoActive && item.dataset.promoPrice) {
+          return parseInt(item.dataset.promoPrice);
+        }
+        return parseInt(item.dataset.price);
+      }
+
+      function selectMethod(method) {
+        selectedMethod = method;
+
+        // Update button states
+        document.querySelectorAll(".method-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        event.target.classList.add("active");
+
+        // Show/hide price lists
+        if (method === "login") {
+          document.getElementById("login-pricelist").classList.remove("hidden");
+          document.getElementById("gamepass-pricelist").classList.add("hidden");
+          document.getElementById("login-form").classList.remove("hidden");
+          document.getElementById("gamepass-form").classList.add("hidden");
+        } else {
+          document.getElementById("login-pricelist").classList.add("hidden");
+          document
+            .getElementById("gamepass-pricelist")
+            .classList.remove("hidden");
+          document.getElementById("login-form").classList.add("hidden");
+          document.getElementById("gamepass-form").classList.remove("hidden");
+        }
+
+        // Clear selected package
+        clearSelection();
+      }
+
+      function clearSelection() {
+        document.querySelectorAll(".price-item").forEach((item) => {
+          item.classList.remove("selected");
+        });
+        document.getElementById("selectedRobux").value = "";
+        document.getElementById("totalPrice").value = "";
+        selectedPackage = null;
+
+        // Clear custom gamepass calculation
+        document.getElementById("gamepassCalculation").classList.add("hidden");
+        document.getElementById("customGamepassRobux").value = "";
+      }
+
+      function calculateGamepass() {
+        const robuxAmount = parseInt(
+          document.getElementById("customGamepassRobux").value
+        );
+
+        if (robuxAmount >= 25) {
+          const gamepassPrice = Math.ceil(robuxAmount / 0.7); // 43% fee means 70% received, so divide by 0.7
+          let rate = 130;
+          if (isPromoActive) {
+            rate = Math.round(130 * 0.95); // Apply 5% discount to rate
+          }
+          const totalCost = robuxAmount * rate;
+
+          document.getElementById("gamepassInstruction").innerHTML = `
+                    ● Setting gamepass senilai <strong>${gamepassPrice.toLocaleString(
+                      "id-ID"
+                    )} Robux</strong>
+                `;
+
+          document
+            .getElementById("gamepassCalculation")
+            .classList.remove("hidden");
+        } else {
+          document
+            .getElementById("gamepassCalculation")
+            .classList.add("hidden");
+        }
+      }
+
+      function selectCustomGamepass() {
+        const robuxAmount = parseInt(
+          document.getElementById("customGamepassRobux").value
+        );
+
+        if (!robuxAmount || robuxAmount < 25) {
+          alert("Minimal order 25 robux!");
+          return;
+        }
+
+        // Clear previous selections
+        clearSelection();
+
+        let rate = 130;
+        if (isPromoActive) {
+          rate = Math.round(130 * 0.95); // Apply 5% discount to rate
+        }
+        const totalCost = robuxAmount * rate;
+        const gamepassPrice = Math.ceil(robuxAmount / 0.7);
+
+        let packageText = `${robuxAmount} Robux Gamepass (Custom) - Rp ${totalCost.toLocaleString("id-ID")}`;
+        if (isPromoActive) {
+          packageText += " (PROMO 5%)";
+        }
+
+        document.getElementById(
+          "selectedRobux"
+        ).value = `${robuxAmount.toLocaleString("id-ID")} Robux`;
+        document.getElementById(
+          "totalPrice"
+        ).value = `Rp ${totalCost.toLocaleString("id-ID")}`;
+        selectedPackage = {
+          robux: robuxAmount,
+          price: totalCost,
+          type: "gamepass-custom",
+          text: packageText,
+          gamepassPrice: gamepassPrice,
+          isPromo: isPromoActive
+        };
+      }
+
+      // Add click event to price items
+      document.querySelectorAll(".price-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          // Clear previous selection
+          clearSelection();
+
+          // Select current item
+          this.classList.add("selected");
+
+          const robux = this.dataset.robux;
+          const effectivePrice = getEffectivePrice(this);
+          const type = this.dataset.type;
+
+          let packageText = "";
+          if (type === "gamepass") {
+            packageText = `${robux} Robux Gamepass - Rp ${effectivePrice.toLocaleString("id-ID")}`;
+          } else {
+            const typeText =
+              type === "fast"
+                ? "FAST"
+                : type === "semi-fast"
+                ? "SEMI FAST"
+                : "SLOW";
+            packageText = `${robux} Robux Via Login ${typeText} - Rp ${effectivePrice.toLocaleString("id-ID")}`;
+          }
+          
+          if (isPromoActive) {
+            packageText += " (PROMO 5%)";
+          }
+
+          document.getElementById("selectedRobux").value = `${parseInt(
+            robux
+          ).toLocaleString("id-ID")} Robux`;
+          document.getElementById("totalPrice").value = `Rp ${effectivePrice.toLocaleString("id-ID")}`;
+          selectedPackage = {
+            robux: robux,
+            price: effectivePrice,
+            originalPrice: parseInt(this.dataset.price),
+            type: type,
+            text: packageText,
+            isPromo: isPromoActive
+          };
+        });
+      });
+
+      function validateForm() {
+        const name = document.getElementById("customerName").value;
+
+        if (!name.trim()) {
+          alert("Mohon isi data!");
+          return false;
+        }
+
+        if (!selectedPackage) {
+          alert("Mohon pilih paket robux terlebih dahulu!");
+          return false;
+        }
+
+        if (selectedMethod === "login") {
+          const username = document.getElementById("robloxUsername").value;
+          const password = document.getElementById("robloxPassword").value;
+          const backupCode = document.getElementById("backupCode").value;
+
+          if (!username.trim()) {
+            alert("Mohon isi username Roblox!");
+            return false;
+          }
+
+          if (!password.trim()) {
+            alert("Mohon isi password Roblox!");
+            return false;
+          }
+        } else {
+          const gamepassLink = document.getElementById("gamepassLink").value;
+          const gamepassUsername =
+            document.getElementById("gamepassUsername").value;
+
+          if (!gamepassLink.trim()) {
+            alert("Mohon isi link gamepass!");
+            return false;
+          }
+
+          if (!gamepassLink.includes("roblox.com")) {
+            alert("Link gamepass harus dari roblox.com!");
+            return false;
+          }
+
+          if (!gamepassUsername.trim()) {
+            alert("Mohon isi username Roblox!");
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      function generateOrderMessage() {
+        if (!validateForm()) return null;
+
+        const name = document.getElementById("customerName").value;
+        const notes = document.getElementById("notes").value;
+
+        let message = `⭑ *FORM ORDER ROBUX* ⭑\n\n`;
+        
+        if (selectedPackage.isPromo) {
+          message += `*PAKET PROMO*\n\n`;
+        }
+        
+        message += `*Jumlah Robux:* ${parseInt(
+          selectedPackage.robux
+        ).toLocaleString("id-ID")}\n`;
+        
+        if (selectedPackage.isPromo && selectedPackage.originalPrice) {
+          message += `*Harga Normal:* Rp ${selectedPackage.originalPrice.toLocaleString("id-ID")}\n`;
+          message += `*Harga Promo:* Rp ${selectedPackage.price.toLocaleString("id-ID")} _(Hemat Rp ${(selectedPackage.originalPrice - selectedPackage.price).toLocaleString("id-ID")})_\n`;
+          message += `*Total Harga:* Rp ${selectedPackage.price.toLocaleString("id-ID")}\n`;
+        } else {
+          message += `*Total Harga:* Rp ${parseInt(
+            selectedPackage.price
+          ).toLocaleString("id-ID")}\n`;
+        }
+
+        if (selectedMethod === "login") {
+          const username = document.getElementById("robloxUsername").value;
+          const password = document.getElementById("robloxPassword").value;
+          const backupCode = document.getElementById("backupCode").value;
+          message += `\n*AKUN ROBLOX (VIA LOGIN):*\n`;
+          message += `› Username: ${username}\n`;
+          message += `› Password: ${password}\n`;
+          message += `› Nickname In Game: ${name}\n`;
+          message += `› Backup Code: ${backupCode}\n`;
+        } else {
+          const gamepassLink = document.getElementById("gamepassLink").value;
+          const gamepassUsername =
+            document.getElementById("gamepassUsername").value;
+
+          message += `\n*ROBLOX GAMEPASS:*\n`;
+          message += `› Link Gamepass: ${gamepassLink}\n`;
+          message += `› Username Roblox: ${gamepassUsername}\n`;
+
+          if (selectedPackage.type === "gamepass-custom") {
+            message += `› Jumlah Robux: ${selectedPackage.robux}\n`;
+            message += `› Setting Gamepass: ${selectedPackage.gamepassPrice.toLocaleString(
+              "id-ID"
+            )} Robux\n`;
+            message += `› Total Harga: Rp ${selectedPackage.price.toLocaleString(
+              "id-ID"
+            )}\n`;
+          }
+        }
+
+        if (notes.trim()) {
+          message += `\n*Catatan:* ${notes}\n`;
+        }
+
+        message += `\n*Waktu Order:* ${new Date().toLocaleString("id-ID")}\n`;
+        message += `\n*Terima kasih telah mempercayai ESPOIRE! ＾◡＾*`;
+
+        return message;
+      }
+
+      function sendToWhatsApp() {
+        const message = generateOrderMessage();
+        if (!message) return;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, "_blank");
+      }
+
+      function sendToTelegram() {
+        const message = generateOrderMessage();
+        if (!message) return;
+
+        const encodedMessage = encodeURIComponent(message);
+        const telegramUrl = `https://t.me/${telegramUsername}?start&text=${encodedMessage}`;
+        window.open(telegramUrl, "_blank");
+      }
+
+      function openHelp() {
+        const helpMessage =
+          "Halo! Saya butuh bantuan terkait pembelian robux. Bisa dibantu?";
+        const encodedMessage = encodeURIComponent(helpMessage);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, "_blank");
+      }
+
+      // Initialize promo check when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        checkPromoDate();
+      });
+    </script>
+  </body>
+</html>
