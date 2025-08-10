@@ -328,10 +328,11 @@
         font-size: 14px;
       }
 
+      /* Updated Footer Sections - Changed from grid to vertical */
       .footer-sections {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         width: 100%;
         margin-bottom: 30px;
       }
@@ -342,14 +343,15 @@
 
       .footer-section h4 {
         color: #203f9a;
-        font-size: 14px;
+        font-size: 16px;
+        margin-bottom: 15px;
       }
 
       .footer-section a {
         display: inline-block;
         color: #666;
         text-decoration: none;
-        margin: 0 8px 8px 0;
+        margin: 0 15px 10px 0;
         transition: all 0.3s ease;
         font-size: 14px;
       }
@@ -398,6 +400,16 @@
         }
 
         .promo-banner p {
+          font-size: 13px;
+        }
+
+        /* Mobile-specific footer adjustments */
+        .footer-sections {
+          gap: 25px;
+        }
+
+        .footer-section a {
+          margin: 0 10px 8px 0;
           font-size: 13px;
         }
       }
@@ -1074,16 +1086,15 @@
             <a href="https://youtu.be/gamepass-tutorial" target="_blank">Tutorial Gamepass</a>
           </div>
                     
-                    <div class="footer-section">
-                        <h4>♥︎ Sosial Media</h4>
-                        <a href="https://t.me/xespoire" target="_blank">Channel Telegram</a>
-                        <a href="https://x.com/mijkage" target="_blank">X</a>
-                        <a href="https://t.me/vouchnya">Testimonial</a>
-                    </div>
-                </div>
-            <div class="footer-divider"></div>
-          <p>© 2025 ESPOIRE - Terpercaya & Aman</p>
+          <div class="footer-section">
+            <h4>♥︎ Sosial Media</h4>
+            <a href="https://t.me/xespoire" target="_blank">Channel Telegram</a>
+            <a href="https://x.com/mijkage" target="_blank">X</a>
+            <a href="https://t.me/vouchnya">Testimonial</a>
+          </div>
         </div>
+        <div class="footer-divider"></div>
+        <p>© 2025 ESPOIRE - Terpercaya & Aman</p>
       </div>
 
       <!-- Floating Help Button -->
