@@ -8,10 +8,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -105,6 +109,58 @@
         to {
           box-shadow: 0 8px 25px rgba(214, 51, 132, 0.5);
         }
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #203f9a;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-nav:hover {
+        background: white;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-prev {
+        left: 15px;
+      }
+
+      .carousel-next {
+        right: 15px;
+      }
+
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .indicator.active {
+        background: #203f9a;
+        transform: scale(1.2);
       }
 
       .method-selector {
@@ -314,9 +370,12 @@
         cursor: pointer;
         transition: all 0.3s ease;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         text-align: center;
-        min-width: 150px;
+        min-width: 180px;
       }
 
       .submit-btn:hover {
@@ -332,6 +391,10 @@
       .submit-btn.telegram:hover {
         background: #7bb1d1;
         box-shadow: 0 5px 15px rgba(148, 194, 218, 0.4);
+      }
+
+      .btn-icon {
+        font-size: 18px;
       }
 
       .hidden {
@@ -378,16 +441,54 @@
       }
 
       .footer-section a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         color: #666;
         text-decoration: none;
         margin: 0 15px 10px 0;
         transition: all 0.3s ease;
         font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 20px;
+        background: #f8f9fa;
       }
 
       .footer-section a:hover {
         color: #203f9a;
+        background: #e7f3ff;
+        transform: translateY(-2px);
+      }
+
+      .social-icon {
+        font-size: 16px;
+        width: 20px;
+        text-align: center;
+        margin-right: 5px;
+      }
+
+      .social-icon.telegram {
+        color: #0088cc;
+      }
+
+      .social-icon.twitter {
+        color: #1da1f2;
+      }
+
+      .social-icon.whatsapp {
+        color: #25d366;
+      }
+
+      .social-icon.testimonial {
+        color: #ff6b6b;
+      }
+
+      .social-icon.youtube {
+        color: #ff0000;
+      }
+
+      .social-icon.gamepad {
+        color: #9b59b6;
       }
 
       @media (max-width: 768px) {
@@ -439,8 +540,27 @@
         }
 
         .footer-section a {
-          margin: 0 10px 8px 0;
+          margin: 0 5px 8px 0;
           font-size: 13px;
+          padding: 6px 10px;
+        }
+
+        .testimonial-item img {
+          height: 300px;
+        }
+
+        .carousel-nav {
+          width: 35px;
+          height: 35px;
+          font-size: 14px;
+        }
+
+        .carousel-prev {
+          left: 10px;
+        }
+
+        .carousel-next {
+          right: 10px;
         }
       }
 
@@ -498,7 +618,7 @@
     <div class="container">
       <div class="header">
         <img
-          src="chibi.png"
+          src="logo.png"
           alt="ESPOIRE Logo"
           class="logo"
           onerror="this.style.display='none'"
@@ -1096,14 +1216,16 @@
 
           <div class="submit-buttons">
             <button type="button" class="submit-btn" onclick="sendToWhatsApp()">
-              ✆ Order via WhatsApp
+              <i class="fab fa-whatsapp btn-icon"></i>
+              Order via WhatsApp
             </button>
             <button
               type="button"
               class="submit-btn telegram"
               onclick="sendToTelegram()"
             >
-              ☏ Order via Telegram
+              <i class="fab fa-telegram-plane btn-icon"></i>
+              Order via Telegram
             </button>
           </div>
         </form>
@@ -1113,19 +1235,34 @@
         <div class="footer-sections">
           <div class="footer-section">
             <h4>ⓘ Tutorial & Bantuan</h4>
-            <a href="https://youtu.be/backup-code-tutorial" target="_blank"
-              >Tutorial Backup Code</a
+            <a href="https://youtu.be/backup-code-tutorial" target="_blank">
+              <i class="fas fa-gamepad social-icon gamepad"></i>Tutorial Backup
+              Code
+            </a>
+            <a
+              href="https://youtube.com/shorts/g61IrtqxGp4?si=1H-Lwt33tW78VH-C"
+              target="_blank"
             >
-            <a href="https://youtu.be/gamepass-tutorial" target="_blank"
-              >Tutorial Gamepass</a
-            >
+              <i class="fab fa-youtube social-icon youtube"></i>Tutorial
+              Gamepass
+            </a>
           </div>
 
           <div class="footer-section">
             <h4>♥︎ Sosial Media</h4>
-            <a href="https://t.me/xespoire" target="_blank">Channel Telegram</a>
-            <a href="https://x.com/mijkage" target="_blank">X</a>
-            <a href="https://t.me/vouchnya">Testimonial</a>
+            <a href="https://t.me/xespoire" target="_blank">
+              <i class="fab fa-telegram-plane social-icon telegram"></i>Channel
+              Telegram
+            </a>
+            <a href="https://x.com/mijkage" target="_blank">
+              <i class="fab fa-twitter social-icon twitter"></i>Twitter
+            </a>
+            <a href="https://wa.me/6288226496511" target="_blank">
+              <i class="fab fa-whatsapp social-icon whatsapp"></i>WhatsApp
+            </a>
+            <a href="https://t.me/vouchnya" target="_blank">
+              <i class="fas fa-comments social-icon testimonial"></i>Testimonial
+            </a>
           </div>
         </div>
         <div class="footer-divider"></div>
@@ -1133,13 +1270,50 @@
       </div>
 
       <!-- Floating Help Button -->
-      <button class="help-button" onclick="openHelp()">💬 Need Help?</button>
+      <button class="help-button" onclick="openHelp()">
+        <span><i class="fas fa-headset"></i></span> Need Help?
+      </button>
     </div>
 
     <script>
       let selectedMethod = "login";
       let selectedPackage = null;
       let isPromoActive = false;
+      let currentTestimonial = 0;
+
+      // Testimonial carousel functionality
+      const totalTestimonials = 4;
+
+      function showTestimonial(index) {
+        const container = document.getElementById("testimonialContainer");
+        const indicators = document.querySelectorAll(".indicator");
+
+        container.style.transform = `translateX(-${index * 100}%)`;
+
+        indicators.forEach((indicator, i) => {
+          indicator.classList.toggle("active", i === index);
+        });
+
+        currentTestimonial = index;
+      }
+
+      function nextTestimonial() {
+        const nextIndex = (currentTestimonial + 1) % totalTestimonials;
+        showTestimonial(nextIndex);
+      }
+
+      function prevTestimonial() {
+        const prevIndex =
+          (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(prevIndex);
+      }
+
+      function goToTestimonial(index) {
+        showTestimonial(index);
+      }
+
+      // Auto-play testimonial carousel
+      setInterval(nextTestimonial, 5000);
 
       // Ganti dengan nomor WhatsApp dan Telegram Anda
       const whatsappNumber = "6288226496511"; // Ganti dengan nomor WA Anda (format 628xxx)
@@ -1464,15 +1638,7 @@
         ).toLocaleString("id-ID")}\n`;
 
         if (selectedPackage.isPromo && selectedPackage.originalPrice) {
-          message += `*Harga Normal:* Rp ${selectedPackage.originalPrice.toLocaleString(
-            "id-ID"
-          )}\n`;
           message += `*Harga Promo:* Rp ${selectedPackage.price.toLocaleString(
-            "id-ID"
-          )} _(Hemat Rp ${(
-            selectedPackage.originalPrice - selectedPackage.price
-          ).toLocaleString("id-ID")})_\n`;
-          message += `*Total Harga:* Rp ${selectedPackage.price.toLocaleString(
             "id-ID"
           )}\n`;
         } else {
@@ -1540,7 +1706,7 @@
 
       function openHelp() {
         const helpMessage =
-          "Halo! Saya butuh bantuan terkait pembelian robux. Bisa dibantu?";
+          "Halo! Aku mau tanya terkait pembelian robux. Bisa dibantu?";
         const encodedMessage = encodeURIComponent(helpMessage);
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, "_blank");
