@@ -1240,7 +1240,7 @@
               <i class="fab fa-telegram-plane social-icon telegram"></i>Channel
               Telegram
             </a>
-            <a href="https://x.com/robuxcart" target="_blank">
+            <a href="https://x.com/ewalleit" target="_blank">
               <i class="fab fa-twitter social-icon twitter"></i>Twitter
             </a>
             <a href="https://wa.me/6288226496511" target="_blank">
@@ -1302,8 +1302,8 @@
       setInterval(nextTestimonial, 5000);
 
       // Ganti dengan nomor WhatsApp dan Telegram Anda
-      const whatsappNumber = "6288226496511"; // Ganti dengan nomor WA Anda (format 628xxx)
-      const telegramUsername = "espoirebot"; // Ganti dengan username Telegram Anda
+      const whatsappNumber = "6288226496511"; // Ganti dengan nomor WA
+      const telegramUsername = "naycart"; // Ganti dengan username Telegram
 
       // Function to check if today is 10th
       function checkPromoDate() {
@@ -1613,22 +1613,22 @@
         const name = document.getElementById("customerName").value;
         const notes = document.getElementById("notes").value;
 
-        let message = `⭑ *FORM ORDER ROBUX* ⭑\n\n`;
+        let message = `⭑ 𝗙𝗢𝗥𝗠 𝗢𝗥𝗗𝗘𝗥 𝗥𝗢𝗕𝗨𝗫 ⭑\n\n`;
 
         if (selectedPackage.isPromo) {
-          message += `*PAKET PROMO*\n\n`;
+          message += `𝗣𝗔𝗞𝗘𝗧 𝗣𝗥𝗢𝗠𝗢\n\n`;
         }
 
-        message += `*Jumlah Robux:* ${parseInt(
+        message += `𝗝𝘂𝗺𝗹𝗮𝗵 𝗥𝗼𝗯𝘂𝘅: ${parseInt(
           selectedPackage.robux
         ).toLocaleString("id-ID")}\n`;
 
         if (selectedPackage.isPromo && selectedPackage.originalPrice) {
-          message += `*Harga Promo:* Rp ${selectedPackage.price.toLocaleString(
+          message += `𝗛𝗮𝗿𝗴𝗮 𝗣𝗿𝗼𝗺𝗼: Rp ${selectedPackage.price.toLocaleString(
             "id-ID"
           )}\n`;
         } else {
-          message += `*Total Harga:* Rp ${parseInt(
+          message += `𝗧𝗼𝘁𝗮𝗹 𝗛𝗮𝗿𝗴𝗮: Rp ${parseInt(
             selectedPackage.price
           ).toLocaleString("id-ID")}\n`;
         }
@@ -1637,7 +1637,7 @@
           const username = document.getElementById("robloxUsername").value;
           const password = document.getElementById("robloxPassword").value;
           const backupCode = document.getElementById("backupCode").value;
-          message += `\n*AKUN ROBLOX (VIA LOGIN):*\n`;
+          message += `\n𝗔𝗞𝗨𝗡 𝗥𝗢𝗕𝗟𝗢𝗫 (𝗩𝗜𝗔 𝗟𝗢𝗚𝗜𝗡)\n`;
           message += `› Username: ${username}\n`;
           message += `› Password: ${password}\n`;
           message += `› Nickname In Game: ${name}\n`;
@@ -1647,7 +1647,7 @@
           const gamepassUsername =
             document.getElementById("gamepassUsername").value;
 
-          message += `\n*ROBLOX GAMEPASS:*\n`;
+          message += `\n𝗥𝗢𝗕𝗟𝗢𝗫 𝗚𝗔𝗠𝗘𝗣𝗔𝗦𝗦\n`;
           message += `› Link Gamepass: ${gamepassLink}\n`;
           message += `› Username Roblox: ${gamepassUsername}\n`;
 
@@ -1663,10 +1663,10 @@
         }
 
         if (notes.trim()) {
-          message += `\n*Catatan:* ${notes}\n`;
+          message += `\n𝗖𝗮𝘁𝗮𝘁𝗮𝗻: ${notes}\n`;
         }
 
-        message += `\n*Waktu Order:* ${new Date().toLocaleString("id-ID")}\n`;
+        message += `\n𝗪𝗮𝗸𝘁𝘂 𝗢𝗿𝗱𝗲𝗿: ${new Date().toLocaleString("id-ID")}\n`;
         message += `\n*Terima kasih telah mempercayai ESPOIRE! ＾◡＾*`;
 
         return message;
